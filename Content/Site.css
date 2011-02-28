@@ -1,0 +1,81 @@
+body
+{
+    font-family: Verdana, Tahoma, Arial, "Helvetica Neue", Helvetica, Sans-Serif;
+    background:#eee;
+    font-size:1.1em;
+    color:#333;
+}
+
+/* Styles for basic forms
+-----------------------------------------------------------*/
+
+fieldset 
+{
+    border:1px solid #ddd;
+    padding:0 1.4em 1.4em 1.4em;
+    margin:0 0 1.5em 0;
+}
+
+legend 
+{
+    font-size:1.2em;
+    font-weight: bold;
+}
+
+textarea 
+{
+    min-height: 75px;
+}
+
+.editor-label 
+{
+    margin: 1em 0 0 0;
+}
+
+.editor-field 
+{
+    margin:0.5em 0 0 0;
+}
+
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error
+{
+    color: #ff0000;
+}
+
+.field-validation-valid
+{
+    display: none;
+}
+
+.input-validation-error
+{
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+
+.validation-summary-errors
+{
+    font-weight: bold;
+    color: #ff0000;
+    margin:0;
+    padding:0;
+}
+.validation-summary-errors ul {
+	margin: inherit 0;
+}
+
+.validation-summary-valid
+{
+    display: none;
+}
+
+
+div {background:#fff; border:1px solid #aaa; border-radius:10px; padding:10px; margin:50px auto; width:700px;}
+h1 {color:#555;}
+p {margin:15px; padding:10px 0; clear:left;}
+label {display:block; float:left; width:200px; margin-right:10px;}
+input[type=text] {display:block; float:left; width: 400px; font-size:1.1em;}
+input[type=submit] {font-size:1.1em; margin:20px 0 0;}

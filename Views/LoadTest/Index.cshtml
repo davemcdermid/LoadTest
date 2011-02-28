@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Run a new test";
+}
+
+<h1>Run a new test</h1>
+
+@Html.ValidationSummary()
+
+@using(Html.BeginForm("run", "loadtest")) {
+	<p>Tests are run in parallel, to put as much load on the target server as possible.</p>
+	<p>@Html.Label("url", "URL to test") @Html.TextBox("url")</p>
+	<p>@Html.Label("hits", "Number of requests to perform") @Html.TextBox("hits")</p>
+	<p>@Html.Label("rmax", "Random number max") @Html.TextBox("rmax")</p>
+	<p>@Html.Label("method", "HTTP Method") @Html.DropDownList("method", new List<SelectListItem> { new SelectListItem { Value="GET", Text="GET" }, new SelectListItem { Value="POST", Text="POST" } })</p>
+	<p><input type="submit" value="Run" /></p>
+	
+	<p><small>If you put a <strong>{rand}</strong> placeholder in your url, then every request will replace it with a random number between 0 and "Random number max".<br /> eg: http://example.com/{rand}.html</small></p>
+}

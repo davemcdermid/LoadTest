@@ -1,0 +1,15 @@
+﻿@model LoadTest.Controllers.TestResults
+@{
+    ViewBag.Title = "Results";
+}
+
+<h1>Results</h1>
+
+<p>Total hits: @Model.Hits</p>
+<p>Total time: @Model.TotalTime.ToString("0.0") s</p>
+<p>Average response time: @Model.AverageResponseTime.ToString("0.0") ms</p>
+<h2>Response times</h2>
+<img src="http://chart.apis.google.com/chart?@Model.ResponseChartData" alt="Response time chart" />
+<h2>Status codes</h2>
+<img src="http://chart.apis.google.com/chart?@Model.StatusChartData" alt="Status chart" />
+<p>@Html.ActionLink("Run a new test", "index")</p>
